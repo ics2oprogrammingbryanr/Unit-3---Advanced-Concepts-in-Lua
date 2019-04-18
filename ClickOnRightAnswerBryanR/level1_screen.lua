@@ -58,6 +58,7 @@ local addEquationTextObject
 local answerTextObject 
 local wrongAnswer1TextObject
 local wrongAnswer2TextObject
+local wrongAnswer3TextObject
 
 -- displays the number correct that the user has
 local numberCorrectText 
@@ -92,6 +93,7 @@ local function DetermineAnswers()
     answer = firstNumber + secondNumber
     wrongAnswer1 = answer + math.random(1,4)
     wrongAnswer2 = answer + math.random(5,8)
+    wrongAnswer3 = answer - math.random(1,4)
 end
 
 -- Function that changes the answers for a new question and places them randomly in one of the positions
@@ -108,19 +110,21 @@ local function DisplayAnswers( )
         answerTextObject.x = display.contentWidth*.3        
         wrongAnswer1TextObject.x = display.contentWidth*.2
         wrongAnswer2TextObject.x = display.contentWidth*.1
-        wrongAnswer3TextObject.x = display.contentWidth*.1
+        wrongAnswer3TextObject.x = display.contentWidth*.4
 
     elseif (answerPosition == 2) then
        
         answerTextObject.x = display.contentWidth*.2        
         wrongAnswer1TextObject.x = display.contentWidth*.1
         wrongAnswer2TextObject.x = display.contentWidth*.3 
+        wrongAnswer3TextObject.x = display.contentWidth*.4
 
     else
        
         answerTextObject.x = display.contentWidth*.1        
         wrongAnswer1TextObject.x = display.contentWidth*.2
         wrongAnswer2TextObject.x = display.contentWidth*.3
+        wrongAnswer3TextObject.x = display.contentWidth*.4
     end
 
 end
