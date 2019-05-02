@@ -103,7 +103,6 @@ end
 -- Move character horizontally
 local function movePlayer (event)
     character.x = character.x + motionx
-    character.x = character.x - motionx
 end
 
 -- Stop character movement when no arrow is pushed
