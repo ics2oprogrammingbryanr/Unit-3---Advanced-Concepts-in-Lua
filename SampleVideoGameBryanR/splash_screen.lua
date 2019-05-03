@@ -86,7 +86,7 @@ function scene:show( event )
         Runtime:addEventListener("enterFrame", MoveCar)
 
         -- Go to the main menu screen after the given time.
-        timer.performWithDelay ( 3000, gotoMainMenu)          
+        timer.performWithDelay ( 3000, gotomain_menu)          
         
     end
 
@@ -115,6 +115,7 @@ function scene:hide( event )
         
         -- stop the jungle sounds channel for this screen
         audio.stop(raceCarChannel)
+
     end
 
 end --function scene:hide( event )
