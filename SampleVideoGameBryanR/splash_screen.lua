@@ -60,6 +60,7 @@ textObject.y = 400
 
 
 --------------------------------------------------------------------------------------------
+local function gotomain_menu()
 
 -- The function called when the scene is issued to appear on screen
 function scene:show( event )
@@ -113,7 +114,7 @@ function scene:hide( event )
     -- Called immediately after scene goes off screen.
     elseif ( phase == "did" ) then
         
-        -- stop the jungle sounds channel for this screen
+        -- stop the race car sounds channel for this screen
         audio.stop(raceCarChannel)
 
     end
