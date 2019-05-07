@@ -29,10 +29,7 @@ local raceCarChannel
 -- global variables
 scrollSpeed = 12
 
-local textObject = display.newText("RM Games", 0, 0, nil, 50)
-textObject.x = 500
-textObject.y = 400
-textObject.alpha = 0
+
 
 -- set background color
 display.setDefault("background", 1/255, 1/255, 1/255)
@@ -61,6 +58,8 @@ textObject.y = 400
 
 --------------------------------------------------------------------------------------------
 local function gotomain_menu()
+    composer.gotoScene( "main_menu" )
+end    
 
 -- The function called when the scene is issued to appear on screen
 function scene:show( event )
@@ -89,6 +88,10 @@ function scene:show( event )
         -- Go to the main menu screen after the given time.
         timer.performWithDelay ( 3000, gotomain_menu)          
         
+        local textObject = display.newText("RM Games", 0, 0, nil, 50)
+        textObject.x = 500
+        textObject.y = 400
+        textObject.alpha = 0
     end
 
 end --function scene:show( event )
@@ -116,6 +119,8 @@ function scene:hide( event )
         
         -- stop the race car sounds channel for this screen
         audio.stop(raceCarChannel)
+        
+
 
     end
 

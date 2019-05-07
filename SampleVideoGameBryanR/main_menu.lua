@@ -26,7 +26,7 @@ sceneName = "main_menu"
 -----------------------------------------------------------------------------------------
 
 -- Creating Scene Object
-local scene = composer.newScene( sceneName )
+local scene = composer.newScene( "main_menu" )
 
 -----------------------------------------------------------------------------------------
 -- LOCAL VARIABLES
@@ -36,7 +36,7 @@ local bkg_image
 local playButton
 local creditsButton
 local instructionButton
-local BkgSound = 
+local BkgSound = audio.loadSound( "Sounds/animals.mp3")
 local BkgSoundChannel
 
 -----------------------------------------------------------------------------------------
@@ -98,7 +98,7 @@ function scene:create( event )
         {   
             -- Set its position on the screen relative to the screen size
             x = display.contentWidth/2,
-            y = display.contentHeight*7/8,
+            y = display.contentHeight/2,
 
             -- Insert the images here
             defaultFile = "Images/PlayButtonUnpressed.png",
@@ -176,6 +176,7 @@ function scene:show( event )
     -- Example: start timers, begin animation, play audio, etc.
     elseif ( phase == "did" ) then       
         
+        BkgSoundChannel = audio.play( BkgSound )
 
     end
 
